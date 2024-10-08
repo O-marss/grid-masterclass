@@ -28,7 +28,6 @@ h2{
     font-weight: 400;
     line-height: 32px;
     color: #333;
-    text-transform: capitalize;
     margin: 0.625rem 0 1.25rem;
 
 }
@@ -80,16 +79,16 @@ img{
 
 .horizontal-container{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
-/* .vertical-container{
+.vertical-container{
     display: flex;
     flex-direction: column;
-} */
+    
+}
 
 
+/* Adjust the page grid  */
 #page-container{
     display: grid;
     grid-template-areas:
@@ -109,9 +108,15 @@ img{
 }
 
 
+/* First section of the page  */
 #learn-more{
     grid-area: learn-more;
     background-color: #f7f8f9;
+    overflow: hidden;
+}
+
+#learn-more-container{
+    align-items: center;
 }
 
 #learn-more h1{
@@ -131,33 +136,41 @@ img{
     text-align: center;
 }
 
+/* Second section of the page */
 #iphone{
     grid-area: iphone;
     background-color: #fff;
+    overflow: hidden;
+
 }
 
+#iphone-container{
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 .iphone-details{ 
     width: 33%;
 }
 
 .iphone-image{
+    width: 50%;
     margin-top: 40px;
 }
 
-.iphone-image img{
-    width: 249px;
-}
-
+/* Third section of the page */
 #keyboard{
     grid-area: keyboard;
     background-color: #f05638;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    
+    text-align: center; 
+    overflow: hidden;
+
+}
+
+#keyboard img{
+    transform: translateY(5%);
 }
 
 #keyboard a{
@@ -168,55 +181,259 @@ img{
 #keyboard h2{
     color: #fff;
     font-weight: bold;
-    margin-top: 0.625rem;
+    margin-top: 2.1875rem;
 }
 
+/* Third section of the page */
 #controller{
     grid-area: controller;
     background-color: #f7f8f9;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center; 
+    overflow: hidden;
+
 }
 
 #controller img{
-    transform: translateX(-10%);
+    transform: translate(-10%, -8%);
 }
 
+#controller h2{
+    width: 50%;
+}
+
+
+/* Fourth section of the page */
 #imac{
     grid-area: imac;
-
     background-color: #fff;
+    width: 100%;
+    padding: 70px 30px 0 30px;
+    justify-content: space-around;
+    overflow: hidden;
+
 }
 
+.imac-header{
+    align-self: end;
+    width: 50%;
+    justify-content: space-around;
+    max-width: 180px;
+}
+
+.imac-header-text{
+    text-align: left;
+}
+
+.imac-header img{
+    transform: translateX(-65%);
+}
+
+.imac-image{
+    width: 250%;
+}
+
+.imac-details{
+    width: 42%;
+}
+
+
+/* Fifth section of the page */
 #twitter{
     grid-area: twitter;
+    background-color: #38d5f4;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 
-    background-color: #27b9c2;
 }
 
+#twitter h2{
+    color: #fff;
+}
+
+#twitter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 240px;
+    height: 240px;
+    padding-inline: 34px;
+    background-color: #35cfed;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+#twitter img{
+    width:44px
+}
+
+/* Fifth section of the page */
 #icloud{
     grid-area: icloud;
-
-    background-color: mediumpurple;
+    background-color: #8f76bc;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 5% 70px;
+    overflow: hidden;
 }
 
+#icloud * {
+    color: #fff;
+}
+
+#icloud i{
+    color: #ffc80a;
+}
+
+#icloud h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin-block: 20px 10px;
+}
+
+.icloud-image-container{
+    align-items: center;
+    justify-content: center;
+    background-color: #8166b0;
+    width: 373px;
+    height: 373px;
+    border-radius: 50%;
+}
+
+.icloud-header-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(100%, 100%, 100%, 0.2);
+    padding: 2px 13px 1px 10px;
+    border-radius: 60px;
+    color: #ffc80a;
+    font-size: 10px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+}
+
+.icloud-header-title h3{
+    font-size: 10px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+}
+
+#icloud img{
+    width: 239px;
+    margin-top: 20px;
+}
+
+#icloud a{
+    text-decoration: none;
+    background-color: #ffc80a;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    border-radius: 50px;
+    margin-top: 30px;
+    padding: 14px 28px;
+}
+
+.icloud-content{
+    width: 80%;
+    max-width: 290px;
+}
+
+/* Sixth section of the page */
 #best-choice{
     grid-area: best-choice;
-
-    background-color: teal;
+    display: flex;
+    background-color: #93b6b7;
+    background-image: url(../images/UX.png);
+    background-position: 50% 100%;
+    background-size: 80%;
+    background-repeat: no-repeat;
 }
 
+#best-choice *{
+    color: #fff;
+}
+
+#best-choice h3{
+    background-color: #fa684f;
+    font-size: 8px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    padding-inline: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transform: translateX(-40px);
+}
+#best-choice h2{
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#best-choice-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#best-choice-container h2{
+    margin: auto;
+    padding-block: 31px;
+}
+
+#best-choice-container img{
+    width: 90%;
+    transform: translateX(-12%);
+}
+
+/* Seventh section of the page */
 #qoute{
     grid-area: qoute;
-
+    align-items: center;
+    justify-content: center;
+    padding-block: 1.875rem;
     background-color: #fff;
 }
 
+#qoute h3{
+    background-color: #7bc424;
+    color: #fff;
+    font-size: 8px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    padding-inline: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+#qoute h2{
+    text-transform: capitalize;
+}
+
+/* Eighth section of the page */
 #tv{
     grid-area: tv;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c2c2c;
+}
 
-    background-color: #333;
+.tv-image{
+    width: 270px;
+    transform: translateX(-20%);
+}
+
+#tv h2 {
+    width: 30%;
+    color: #fff;
 }
