@@ -68,6 +68,28 @@
     #tv{
         grid-column: 3 / 5;
     }
+
+    #twitter:hover #twitter-container{
+        position: absolute;
+        animation: pingPong 3s 0.4s linear infinite;
+    }
+    
+    @keyframes pingPong{ 
+    
+
+        0%, 50%, 100% {
+            left: calc(50% - 120px); /* Center position */
+        }
+        25% {
+            left: 0; /* Moves to the top */
+        }
+        75% {
+            left: calc(100% - 240px); /* Moves to the bottom */
+        }
+
+
+    
+    }
     
 }
 
