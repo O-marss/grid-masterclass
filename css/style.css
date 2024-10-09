@@ -100,7 +100,7 @@ img{
     "tv tv tv tv" 
     ;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: auto 1fr 1fr 1fr  auto auto auto auto;
+    grid-template-rows: auto 1fr 1fr 1fr  1fr 1fr auto auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -259,13 +259,12 @@ img{
 
 /* Fifth section of the page */
 #twitter{
+    position: relative;
     grid-area: twitter;
     background-color: #38d5f4;
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden;
-
 }
 
 #twitter h2{
@@ -416,8 +415,10 @@ img{
 }
 
 #best-choice-container img{
+    position: relative;
     width: 90%;
-    transform: translateX(-12%);
+    left: -12%;
+
 }
 
 /* Seventh section of the page */
@@ -465,4 +466,89 @@ img{
 #tv h2 {
     width: 35%;
     color: #fff;
+}
+
+
+.icloud-image-container img {
+    animation: rotating 2s linear infinite alternate;
+}
+
+@keyframes rotating{
+    0%{
+        transform: rotate(0deg);
+    }
+    45%{
+        transform: rotate(0deg);
+    }
+    90%{
+        transform: rotate(360deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+#iphone img:hover{
+    transform: scale(1.1);
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale();
+    }
+
+    100%{
+        width: 150%;
+    }
+}
+
+#best-choice{
+    overflow: hidden;
+}
+
+#best-choice img{
+    animation: moveDown 4s 1s linear infinite alternate;
+}
+
+@keyframes moveDown{
+    0%{
+        transform: translateY(0);
+    }
+
+   45%{
+        transform: translateY(0);
+    }
+
+    90%{
+        transform: translateY(100%);
+    }
+    
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+
+#twitter-container{
+    position: absolute;
+    animation: pingPong 2s linear infinite;
+}
+
+@keyframes pingPong{
+    0%,100% {
+        top: 0; /* Center position */
+    }
+
+
+    30%{
+        top: calc(100% - 240px); /* Moves to the top */
+    }
+
+
+    50%, 90%{
+        top: calc(50% - 120px);
+    }
 }
