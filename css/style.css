@@ -69,6 +69,12 @@ a{
     color: #27b9c2;
 }
 
+span{
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #27b9c2;
+}
+
 img{
     display: inline-block;
     max-width: 100%;
@@ -166,9 +172,11 @@ img{
 
 /* Third section of the page */
 #keyboard{
+    position: relative;
     grid-area: keyboard;
     background-color: #f05638;
     align-content: center;
+    overflow: hidden;
     
 }
 
@@ -178,17 +186,16 @@ img{
     text-align: center; 
 }
 
-#keyboard img{
+#keyboard-container img{
     width: 320px;
     transform: translateY(5%);
 }
 
 #keyboard a{
     color: #ffc80a;
-    ;
 }
 
-#keyboard h2{
+#keyboard-container h2{
     color: #fff;
     font-weight: bold;
     margin-top: 2.1875rem;
@@ -559,7 +566,7 @@ img{
 
 #twitter:hover #twitter-container{
     position: absolute;
-    animation: pingPong 2s 1s linear infinite;
+    animation: pingPong 2s 0.2s linear infinite;
 }
 
 @keyframes pingPong{ 
@@ -574,4 +581,53 @@ img{
     75% {
         top: calc(100% - 240px); /* Moves to the bottom */
     }
+}
+
+
+
+#keyboard-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.4s;
+}
+
+#overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+    transform: translateX(-100%);
+    text-align: center;
+    transition: transform 0.4s;
+    
+}
+
+
+#overlay img{
+    width: 80%;
+    filter: drop-shadow(4px 4px 9px #000a);
+
+}
+
+#overlay h2{
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+    max-width: 180px;
+}
+
+#overlay a{
+    color: #000;
+}
+#overlay:target {
+    transform: translateX(0);
 }

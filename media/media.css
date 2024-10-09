@@ -86,17 +86,11 @@
         75% {
             left: calc(100% - 240px); /* Moves to the bottom */
         }
-
-
-    
     }
-    
 }
 
 @media (min-width: 1200px){
-   
 }
 
 @media (min-width: 1400px){
-   
 }
