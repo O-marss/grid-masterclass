@@ -444,7 +444,7 @@ img {
 
 /* !Animate Sections */
 
-/* #learn-more {
+#learn-more {
   position: relative;
 }
 
@@ -520,38 +520,8 @@ img {
   }
 }
 
-#twitter {
-  position: relative;
-}
-
-.twitter-content {
-  position: absolute;
-}
-
-#twitter:hover .twitter-content {
-  animation: pingPong 3s 0.4s linear infinite;
-}
-
-@keyframes pingPong {
-  0%,
-  50%,
-  100% {
-    left: calc(50% - 120px);
-  }
-  25% {
-    left: 0;
-  }
-  75% {
-    left: calc(100% - 240px);
-  }
-}
-
 #keyboard {
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   transition: all 0.4s;
 }
 
@@ -588,4 +558,31 @@ img {
 }
 #overlay:target {
   transform: translateX(0);
-} */
+}
+
+#twitter{
+    position: relative;
+    height: 240px;
+  }
+
+  .twitter-content{
+    position: absolute;
+  }
+
+  #twitter:hover .twitter-content {
+    animation: pingPong 3s 0.4s linear infinite;
+  }
+  
+  @keyframes pingPong {
+    0%,
+    50%,
+    100% {
+      left: calc(50% - 120px);
+    }
+    25% {
+        left: 0;
+    }
+    75% {
+        left: calc(100% - 240px);
+    }
+  }
