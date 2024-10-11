@@ -1,10 +1,94 @@
+
+
 @media (min-width: 576px){
 
 }
 
-@media (min-width: 768px){
+@media (min-width: 500px){
+    #page-container{
+        display: grid;
+        grid-template-areas:
+        "learn-more learn-more learn-more learn-more "
+        "iphone iphone iphone iphone "
+        "keyboard keyboard controller controller "
+        "imac imac imac imac "
+        "twitter twitter icloud icloud"
+        "best-choice best-choice icloud icloud "
+        "qoute qoute qoute qoute"
+        "tv tv tv tv" 
+        ;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: auto 1fr 1fr 1fr auto auto auto auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    #learn-more h1{
+        font-size: 2.1875rem;
+    }
+
+    #iphone{
+        flex-direction: row;
+        align-items: center;
+        padding: 0 1.9375rem;
+    }
     
+    .iphone-details{ 
+        width: 33%;
+        margin: 0;
+    }
+    
+    .iphone-image{
+        align-self: end;
+        margin-top: 40px;
+    }
+    
+    .iphone-image img{
+        width: 250px;
+    }
+
+
+    #imac{
+        flex-direction: row;
+        padding: 68px 4% 0 4%;
+    }
+
+    #imac{
+        justify-content: space-around;
+    }
+    
+    .imac-header{
+        align-self: end;
+        width: 50%;
+        max-width: 180px;
+        margin: 0;
+
+    }
+
+    .imac-image{
+        transform: translateX(-63%);
+        width: 250%;
+    }
+
+    .imac-details{
+        width: 42%;
+        margin: 0;
+    }
+
+    #tv{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-block: 0;
+        padding-inline: 2.5rem;
+    }
+
+    #tv h2{
+        width: 35%;
+        text-align: left;
+    }
 }
+
+
 
 @media (min-width: 992px){
 
@@ -23,6 +107,9 @@
     }
 
     #iphone{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
         grid-column: 1 / 3;
         grid-row: 1 / 2;
     }
@@ -69,24 +156,7 @@
         grid-column: 3 / 5;
     }
 
-    #twitter:hover #twitter-container{
-        position: absolute;
-        animation: pingPong 3s 0.4s linear infinite;
-    }
     
-    @keyframes pingPong{ 
-    
-
-        0%, 50%, 100% {
-            left: calc(50% - 120px); /* Center position */
-        }
-        25% {
-            left: 0; /* Moves to the top */
-        }
-        75% {
-            left: calc(100% - 240px); /* Moves to the bottom */
-        }
-    }
 }
 
 @media (min-width: 1200px){
