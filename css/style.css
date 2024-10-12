@@ -523,6 +523,7 @@ img {
 #keyboard {
   position: relative;
   transition: all 0.4s;
+  overflow-x: hidden;
 }
 
 #keyboard-overlay {
@@ -538,7 +539,8 @@ img {
   background-color: goldenrod;
   transform: translateX(-100%);
   text-align: center;
-  transition: transform 0.4s;
+  transition: all 0.4s;
+  width: auto;
 }
 
 #keyboard-overlay img {
@@ -556,6 +558,7 @@ img {
 #keyboard-overlay a {
   color: #000;
 }
+
 #keyboard-overlay:target {
   transform: translateX(0);
 }
@@ -564,6 +567,7 @@ img {
 #controller {
   position: relative;
   transition: all 0.4s;
+  overflow: hidden;
 }
 
 #controller-overlay {
@@ -579,7 +583,7 @@ img {
   background-color: rgb(32, 218, 125);
   transform: translateX(-100%);
   text-align: center;
-  transition: transform 0.4s;
+  transition: all 0.4s;
 }
 
 #controller-overlay img {
